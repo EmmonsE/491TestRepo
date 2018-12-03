@@ -459,6 +459,7 @@
                         <viewLayoutGuide key="safeArea" id="bhT-tc-s8w"/>
                     </view>
                     <connections>
+                        <outlet property="startTestButton" destination="Ewh-m5-Rur" id="xeR-cD-xa5"/>
                         <outlet property="testNameLabel" destination="vfZ-Bg-nwx" id="aQv-op-oT8"/>
                     </connections>
                 </viewController>
@@ -466,10 +467,10 @@
             </objects>
             <point key="canvasLocation" x="972" y="1692.5037481259371"/>
         </scene>
-        <!--View Controller-->
+        <!--Running Test View Controller-->
         <scene sceneID="RmB-ol-Bhd">
             <objects>
-                <viewController id="sWR-1k-bX7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RunningTestViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="sWR-1k-bX7" customClass="RunningTestViewController" customModule="_91TestRepo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mCp-MD-gL5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -480,13 +481,15 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="rmp-RL-nJq"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="28"/>
+                                <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
+                                <size key="titleShadowOffset" width="1" height="0.0"/>
                                 <state key="normal" title="Cancel Test">
                                     <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="startButtonTap:" destination="sWR-1k-bX7" eventType="touchUpInside" id="zqv-dT-iGs"/>
                                     <action selector="startTestTap:" destination="BQ3-IX-9wQ" eventType="touchUpInside" id="PBs-PW-sRr"/>
-                                    <segue destination="BQ3-IX-9wQ" kind="show" id="YGT-ow-iRc"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -498,10 +501,36 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hNT-Mw-5cO"/>
                     </view>
+                    <connections>
+                        <outlet property="popOver" destination="PCA-RT-Vgq" id="i8K-AB-ofB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7BR-0P-Lct" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="PCA-RT-Vgq">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XB1-xP-iHL">
+                            <rect key="frame" x="97" y="98" width="46" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="popOverButtonTap:" destination="sWR-1k-bX7" eventType="touchUpInside" id="YiJ-XU-O3f"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqt-aS-KL9">
+                            <rect key="frame" x="99" y="20" width="42" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="l7U-v2-7li"/>
+                </view>
             </objects>
-            <point key="canvasLocation" x="972" y="2453"/>
+            <point key="canvasLocation" x="972" y="2985.1574212893556"/>
         </scene>
         <!--Main Test Selection View Controller-->
         <scene sceneID="Z4r-za-Oqb">

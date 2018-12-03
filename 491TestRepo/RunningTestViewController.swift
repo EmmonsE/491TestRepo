@@ -1,28 +1,32 @@
 //
-//  TestStartViewController.swift
+//  RunningTestViewController.swift
 //  491TestRepo
 //
-//  Created by Emily Emmons on 12/2/18.
+//  Created by Emily Emmons on 12/3/18.
 //  Copyright © 2018 Emily Emmons. All rights reserved.
 //
 
 import UIKit
 
-class TestPageViewController: UIViewController {
-    
-    @IBOutlet weak var testNameLabel: UILabel!
-    
-    @IBOutlet weak var startTestButton: UIButton!
-    
-    var buttonMenuLabel = ""
+class RunningTestViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.testNameLabel.text = buttonMenuLabel
+        self.popOver.layer.cornerRadius = 10
+        // Do any additional setup after loading the view.
     }
     
-
+    @IBOutlet var popOver: UIView!
     
+    @IBAction func startButtonTap(_ sender: Any) {
+        self.view.addSubview(popOver)
+        popOver.center = self.view.center
+    }
+    
+    @IBAction func popOverButtonTap(_ sender: Any) {
+        self.popOver.removeFromSuperview()
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
