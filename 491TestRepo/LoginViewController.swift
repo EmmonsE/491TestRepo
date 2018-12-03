@@ -32,6 +32,10 @@ class LoginViewController: UIViewController {
         guard let mainNavigationVC = mainStoryboard.instantiateViewController(withIdentifier: "MainNavigationController") as? MainNavigationController else {
             return
         }
+        
+//        if let mainVC = mainNavigationVC.topView as? ViewController{
+//            mainVC.userName = userNameTextField.text
+//        }
         // this is a modal segue; not a push/pop segue
         present(mainNavigationVC, animated: true, completion: nil)
         

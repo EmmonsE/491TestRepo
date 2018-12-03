@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class MedHistoryViewController: UIViewController {
     @IBOutlet var lineFields:[UITextField]!
 
     override func viewDidLoad() {
