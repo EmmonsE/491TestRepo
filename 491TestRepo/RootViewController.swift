@@ -10,9 +10,15 @@ import UIKit
 
 class RootViewController: UIViewController {
 
+    @IBOutlet var allButtons: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        allButtons.forEach { button in
+            button.layer.cornerRadius = 10
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.darkGray.cgColor
+        }
         // Do any additional setup after loading the view.
     }
 

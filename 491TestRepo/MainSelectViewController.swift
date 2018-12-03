@@ -10,21 +10,26 @@ import UIKit
 
 class MainSelectViewController: UIViewController {
     
+    @IBOutlet var allButtons: [UIButton]!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        allButtons.forEach { button in
+            button.layer.cornerRadius = 10
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.darkGray.cgColor
+        }
         // Do any additional setup after loading the view.
     }
     
-//    @IBAction func nextViewTap(_ sender: Any) {
-//
-//        if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "TestPageViewController") as? TestPageViewController {
-//            nextVC.buttonMenuLabel = testMenuOption.titleLabel!.text ?? ""
-//            self.navigationController!.pushViewController(nextVC, animated: true)
-//        }
-//    }
-
-    
+    //    @IBAction func nextViewTap(_ sender: Any) {
+    //
+    //        if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "TestPageViewController") as? TestPageViewController {
+    //            nextVC.buttonMenuLabel = testMenuOption.titleLabel!.text ?? ""
+    //            self.navigationController!.pushViewController(nextVC, animated: true)
+    //        }
+    //    }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let button = sender as! UIButton
@@ -32,7 +37,7 @@ class MainSelectViewController: UIViewController {
         if segue.destination is TestPageViewController {
             
         let nextVC = segue.destination as? TestPageViewController
-        nextVC?.buttonMenuLabel = button.titleLabel!.text ?? ""
+        nextVC!.buttonMenuLabel = button.titleLabel!.text ?? ""
         }
     }
     

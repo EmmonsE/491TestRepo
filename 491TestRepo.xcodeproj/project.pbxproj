@@ -10,6 +10,11 @@
 		2D46B98C21B48F5300202D3D /* TremorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D46B98B21B48F5300202D3D /* TremorSelectionViewController.swift */; };
 		2D46B98E21B48F7300202D3D /* BradySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D46B98D21B48F7300202D3D /* BradySelectionViewController.swift */; };
 		2D46B99021B4B97100202D3D /* MainSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D46B98F21B4B97100202D3D /* MainSelectViewController.swift */; };
+		2D46B99621B4F25400202D3D /* abstract-grey-background-with-hexagons-Download-Royalty-free-Vector-File-EPS-124173.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D46B99521B4F25400202D3D /* abstract-grey-background-with-hexagons-Download-Royalty-free-Vector-File-EPS-124173.jpg */; };
+		2D46B99A21B4F86D00202D3D /* img_490776.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D46B99921B4F86D00202D3D /* img_490776.png */; };
+		2D46B9B421B5144200202D3D /* 500_F_164585334_z8PU9bPT1AbcBYoCi6yS27xgA9vCdv2T.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D46B9B121B5144100202D3D /* 500_F_164585334_z8PU9bPT1AbcBYoCi6yS27xgA9vCdv2T.jpg */; };
+		2D46B9B621B51CE200202D3D /* images-7.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 2D46B9B521B51CE200202D3D /* images-7.jpeg */; };
+		2D46B9B821B51DF700202D3D /* dark-grey-texture_1100-158.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2D46B9B721B51DF600202D3D /* dark-grey-texture_1100-158.jpg */; };
 		2D892C282193371A00BDE769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D892C272193371A00BDE769 /* AppDelegate.swift */; };
 		2D892C2A2193371A00BDE769 /* MedHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D892C292193371A00BDE769 /* MedHistoryViewController.swift */; };
 		2D892C2D2193371A00BDE769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D892C2B2193371A00BDE769 /* Main.storyboard */; };
@@ -25,6 +30,11 @@
 		2D46B98B21B48F5300202D3D /* TremorSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TremorSelectionViewController.swift; sourceTree = "<group>"; };
 		2D46B98D21B48F7300202D3D /* BradySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BradySelectionViewController.swift; sourceTree = "<group>"; };
 		2D46B98F21B4B97100202D3D /* MainSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSelectViewController.swift; sourceTree = "<group>"; };
+		2D46B99521B4F25400202D3D /* abstract-grey-background-with-hexagons-Download-Royalty-free-Vector-File-EPS-124173.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "abstract-grey-background-with-hexagons-Download-Royalty-free-Vector-File-EPS-124173.jpg"; path = "../../../Downloads/abstract-grey-background-with-hexagons-Download-Royalty-free-Vector-File-EPS-124173.jpg"; sourceTree = "<group>"; };
+		2D46B99921B4F86D00202D3D /* img_490776.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_490776.png; path = ../../../Downloads/img_490776.png; sourceTree = "<group>"; };
+		2D46B9B121B5144100202D3D /* 500_F_164585334_z8PU9bPT1AbcBYoCi6yS27xgA9vCdv2T.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = 500_F_164585334_z8PU9bPT1AbcBYoCi6yS27xgA9vCdv2T.jpg; path = ../../../Downloads/500_F_164585334_z8PU9bPT1AbcBYoCi6yS27xgA9vCdv2T.jpg; sourceTree = "<group>"; };
+		2D46B9B521B51CE200202D3D /* images-7.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "images-7.jpeg"; path = "../../../Downloads/images-7.jpeg"; sourceTree = "<group>"; };
+		2D46B9B721B51DF600202D3D /* dark-grey-texture_1100-158.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "dark-grey-texture_1100-158.jpg"; path = "../../../Downloads/dark-grey-texture_1100-158.jpg"; sourceTree = "<group>"; };
 		2D892C242193371A00BDE769 /* 491TestRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 491TestRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D892C272193371A00BDE769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D892C292193371A00BDE769 /* MedHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedHistoryViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +91,11 @@
 				2DE68ADA21B449980008CB3B /* TestPageViewController.swift */,
 				2D46B98B21B48F5300202D3D /* TremorSelectionViewController.swift */,
 				2D46B98D21B48F7300202D3D /* BradySelectionViewController.swift */,
+				2D46B99521B4F25400202D3D /* abstract-grey-background-with-hexagons-Download-Royalty-free-Vector-File-EPS-124173.jpg */,
+				2D46B99921B4F86D00202D3D /* img_490776.png */,
+				2D46B9B121B5144100202D3D /* 500_F_164585334_z8PU9bPT1AbcBYoCi6yS27xgA9vCdv2T.jpg */,
+				2D46B9B521B51CE200202D3D /* images-7.jpeg */,
+				2D46B9B721B51DF600202D3D /* dark-grey-texture_1100-158.jpg */,
 			);
 			path = 491TestRepo;
 			sourceTree = "<group>";
@@ -143,7 +158,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D46B9B421B5144200202D3D /* 500_F_164585334_z8PU9bPT1AbcBYoCi6yS27xgA9vCdv2T.jpg in Resources */,
+				2D46B99621B4F25400202D3D /* abstract-grey-background-with-hexagons-Download-Royalty-free-Vector-File-EPS-124173.jpg in Resources */,
+				2D46B99A21B4F86D00202D3D /* img_490776.png in Resources */,
 				2D892C322193371C00BDE769 /* LaunchScreen.storyboard in Resources */,
+				2D46B9B621B51CE200202D3D /* images-7.jpeg in Resources */,
+				2D46B9B821B51DF700202D3D /* dark-grey-texture_1100-158.jpg in Resources */,
 				2D892C2F2193371C00BDE769 /* Assets.xcassets in Resources */,
 				2D892C2D2193371A00BDE769 /* Main.storyboard in Resources */,
 			);

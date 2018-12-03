@@ -11,12 +11,17 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    @IBOutlet var allButtons: [UIButton]!
+    
     @IBOutlet weak var userNameTextField: UITextField!
     
     @IBOutlet weak var passwordTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        allButtons.forEach { button in
+            button.layer.cornerRadius = 10
+        }
         // Do any additional setup after loading the view, typically from a nib.
     }
     
