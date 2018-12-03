@@ -337,6 +337,18 @@
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wTm-6R-Lmh">
+                                <rect key="frame" x="127" y="615" width="121" height="32"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="121" id="8oe-ib-o1y"/>
+                                    <constraint firstAttribute="height" constant="32" id="WF6-RK-W1c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="20"/>
+                                <state key="normal" title="Update">
+                                    <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.5" green="0.011882812865426695" blue="0.0060599231444235513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -346,7 +358,9 @@
                             <constraint firstItem="RnI-gn-J9q" firstAttribute="top" secondItem="Lew-fl-3pi" secondAttribute="bottom" constant="81" id="Aph-Fl-WU1"/>
                             <constraint firstItem="Lew-fl-3pi" firstAttribute="trailing" secondItem="W2E-HU-yza" secondAttribute="trailing" id="CFy-HN-onS"/>
                             <constraint firstItem="Lew-fl-3pi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="198" id="Nxt-CH-hcs"/>
+                            <constraint firstItem="wTm-6R-Lmh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fmI-9i-upI"/>
                             <constraint firstItem="p7j-19-ZZB" firstAttribute="leading" secondItem="W2E-HU-yza" secondAttribute="leading" id="fvP-kv-xPQ"/>
+                            <constraint firstAttribute="bottom" secondItem="wTm-6R-Lmh" secondAttribute="bottom" constant="20" symbolic="YES" id="qHa-Wm-Cno"/>
                             <constraint firstItem="Lew-fl-3pi" firstAttribute="top" secondItem="W2E-HU-yza" secondAttribute="top" id="qrs-Wn-O3y"/>
                             <constraint firstItem="p7j-19-ZZB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="27" id="zog-Dp-CWy"/>
                         </constraints>
@@ -444,6 +458,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bhT-tc-s8w"/>
                     </view>
+                    <connections>
+                        <outlet property="testNameLabel" destination="vfZ-Bg-nwx" id="aQv-op-oT8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM7-0V-vSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -980,6 +997,6 @@
         <image name="img_490776.png" width="868" height="980"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6kF-YA-7sj"/>
+        <segue reference="E3F-TD-VRx"/>
     </inferredMetricsTieBreakers>
 </document>

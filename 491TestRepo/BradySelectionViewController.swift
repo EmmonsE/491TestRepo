@@ -22,16 +22,16 @@ class BradySelectionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-//        let button = sender as! UIButton
-//        
-//        if segue.destination is TestPageViewController {
-//            
-//            let nextVC = segue.destination as? TestPageViewController
-//            nextVC?.buttonMenuLabel = button.titleLabel!.text ?? ""
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let button = sender as! UIButton
+        
+        if segue.destination is TestPageViewController {
+            
+            let nextVC = segue.destination as? TestPageViewController
+            nextVC?.buttonMenuLabel = button.titleLabel!.text ?? ""
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

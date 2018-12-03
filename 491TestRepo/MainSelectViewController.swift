@@ -23,23 +23,23 @@ class MainSelectViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    //    @IBAction func nextViewTap(_ sender: Any) {
-    //
-    //        if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "TestPageViewController") as? TestPageViewController {
-    //            nextVC.buttonMenuLabel = testMenuOption.titleLabel!.text ?? ""
-    //            self.navigationController!.pushViewController(nextVC, animated: true)
-    //        }
-    //    }
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-//    {
-//        let button = sender as! UIButton
-//        
-//        if segue.destination is TestPageViewController {
-//            
-//        let nextVC = segue.destination as? TestPageViewController
-//        nextVC!.buttonMenuLabel = button.titleLabel!.text ?? ""
+//        @IBAction func nextViewTap(_ sender: Any) {
+//
+//            if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "TestPageViewController") as? TestPageViewController {
+//                nextVC.buttonMenuLabel = testMenuOption.titleLabel!.text ?? ""
+//                self.navigationController!.pushViewController(nextVC, animated: true)
+//            }
 //        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        let button = sender as! UIButton
+        
+        if segue.destination is TestPageViewController {
+            
+        let nextVC = segue.destination as? TestPageViewController
+        nextVC!.buttonMenuLabel = button.titleLabel!.text ?? ""
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

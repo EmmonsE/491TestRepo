@@ -22,7 +22,7 @@ class TestPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print(buttonMenuLabel)
-        //self.testNameLabel.text = buttonMenuLabel
+        self.testNameLabel.text = buttonMenuLabel
         
         // Do any additional setup after loading the view.
     }
