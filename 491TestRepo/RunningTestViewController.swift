@@ -9,18 +9,39 @@
 import UIKit
 
 class RunningTestViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.popOver.layer.cornerRadius = 10
+        TIMER = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.runClock), userInfo: nil, repeats: true)
+        self.view.addSubview(countdownLabel)
         // Do any additional setup after loading the view.
     }
     
     @IBOutlet var popOver: UIView!
     
-    @IBAction func startButtonTap(_ sender: Any) {
+    @IBAction func cancelButtonTap(_ sender: Any) {
         self.view.addSubview(popOver)
         popOver.center = self.view.center
+    }
+    
+    var TIMER = Timer()
+    var SECONDS = 5
+    //var countdownLabel: UILabel = UILabel(frame: CGRect(x: 50, y:50, width:320, height:50))
+    
+    @IBOutlet weak var countdownLabel: UILabel!
+    
+    @objc func runClock() {
+        SECONDS = SECONDS - 1
+        countdownLabel.text = String(SECONDS)
+        if SECONDS == 0 {
+            //countdownLabel.backgroundColor = UIColor.lightGray
+            //countdownLabel.text = "Link to PopOver Now"
+            
+            TIMER.invalidate()
+            self.view.addSubview(popOver)
+            popOver.center = self.view.center
+        }
     }
     
     @IBAction func popOverButtonTap(_ sender: Any) {

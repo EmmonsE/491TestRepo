@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2D165AF621B5AB1D0041F995 /* RunningTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D165AF521B5AB1D0041F995 /* RunningTestViewController.swift */; };
+		2D165AF921B766D50041F995 /* UMassAmherst_longform-RGB.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D165AF721B766D50041F995 /* UMassAmherst_longform-RGB.png */; };
+		2D165AFA21B766D50041F995 /* 1763.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D165AF821B766D50041F995 /* 1763.png */; };
+		2D165AFE21B778720041F995 /* checkmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D165AFD21B778720041F995 /* checkmark.png */; };
+		2D165B0021B77C070041F995 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D165AFF21B77C070041F995 /* UIViewExtensions.swift */; };
 		2D46B98C21B48F5300202D3D /* TremorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D46B98B21B48F5300202D3D /* TremorSelectionViewController.swift */; };
 		2D46B98E21B48F7300202D3D /* BradySelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D46B98D21B48F7300202D3D /* BradySelectionViewController.swift */; };
 		2D46B99021B4B97100202D3D /* MainSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D46B98F21B4B97100202D3D /* MainSelectViewController.swift */; };
-		2D46B99A21B4F86D00202D3D /* img_490776.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D46B99921B4F86D00202D3D /* img_490776.png */; };
 		2D892C282193371A00BDE769 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D892C272193371A00BDE769 /* AppDelegate.swift */; };
 		2D892C2A2193371A00BDE769 /* MedHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D892C292193371A00BDE769 /* MedHistoryViewController.swift */; };
 		2D892C2D2193371A00BDE769 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D892C2B2193371A00BDE769 /* Main.storyboard */; };
@@ -25,10 +28,13 @@
 
 /* Begin PBXFileReference section */
 		2D165AF521B5AB1D0041F995 /* RunningTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTestViewController.swift; sourceTree = "<group>"; };
+		2D165AF721B766D50041F995 /* UMassAmherst_longform-RGB.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "UMassAmherst_longform-RGB.png"; path = "../../../Downloads/UMassAmherst_longform-RGB.png"; sourceTree = "<group>"; };
+		2D165AF821B766D50041F995 /* 1763.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 1763.png; path = ../../../Downloads/1763.png; sourceTree = "<group>"; };
+		2D165AFD21B778720041F995 /* checkmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = checkmark.png; path = ../../../Downloads/checkmark.png; sourceTree = "<group>"; };
+		2D165AFF21B77C070041F995 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		2D46B98B21B48F5300202D3D /* TremorSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TremorSelectionViewController.swift; sourceTree = "<group>"; };
 		2D46B98D21B48F7300202D3D /* BradySelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BradySelectionViewController.swift; sourceTree = "<group>"; };
 		2D46B98F21B4B97100202D3D /* MainSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainSelectViewController.swift; sourceTree = "<group>"; };
-		2D46B99921B4F86D00202D3D /* img_490776.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = img_490776.png; path = ../../../Downloads/img_490776.png; sourceTree = "<group>"; };
 		2D892C242193371A00BDE769 /* 491TestRepo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 491TestRepo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D892C272193371A00BDE769 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D892C292193371A00BDE769 /* MedHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedHistoryViewController.swift; sourceTree = "<group>"; };
@@ -85,8 +91,11 @@
 				2DE68ADA21B449980008CB3B /* TestPageViewController.swift */,
 				2D46B98B21B48F5300202D3D /* TremorSelectionViewController.swift */,
 				2D46B98D21B48F7300202D3D /* BradySelectionViewController.swift */,
-				2D46B99921B4F86D00202D3D /* img_490776.png */,
 				2D165AF521B5AB1D0041F995 /* RunningTestViewController.swift */,
+				2D165AF821B766D50041F995 /* 1763.png */,
+				2D165AF721B766D50041F995 /* UMassAmherst_longform-RGB.png */,
+				2D165AFD21B778720041F995 /* checkmark.png */,
+				2D165AFF21B77C070041F995 /* UIViewExtensions.swift */,
 			);
 			path = 491TestRepo;
 			sourceTree = "<group>";
@@ -149,8 +158,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2D46B99A21B4F86D00202D3D /* img_490776.png in Resources */,
+				2D165AF921B766D50041F995 /* UMassAmherst_longform-RGB.png in Resources */,
 				2D892C322193371C00BDE769 /* LaunchScreen.storyboard in Resources */,
+				2D165AFE21B778720041F995 /* checkmark.png in Resources */,
+				2D165AFA21B766D50041F995 /* 1763.png in Resources */,
 				2D892C2F2193371C00BDE769 /* Assets.xcassets in Resources */,
 				2D892C2D2193371A00BDE769 /* Main.storyboard in Resources */,
 			);
@@ -163,6 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D165B0021B77C070041F995 /* UIViewExtensions.swift in Sources */,
 				2DE68AE121B45B150008CB3B /* LoginViewController.swift in Sources */,
 				2DE68ADF21B457670008CB3B /* MainNavigationController.swift in Sources */,
 				2D165AF621B5AB1D0041F995 /* RunningTestViewController.swift in Sources */,

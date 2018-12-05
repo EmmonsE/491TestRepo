@@ -12,6 +12,18 @@ class MainSelectViewController: UIViewController {
     
     @IBOutlet var allButtons: [UIButton]!
     
+    @IBOutlet weak var testUIImageView: UIImageView!
+    
+    
+    @IBOutlet var animationWrapperViews: [UIView]!
+    
+    @IBOutlet var completedTaskViews: [UIImageView]!
+    
+    @IBAction func slideTextButtonTapped(_ sender: UIButton) {
+        testUIImageView.isHidden = false
+        self.testUIImageView.slideInFromRight()
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +31,19 @@ class MainSelectViewController: UIViewController {
             button.layer.cornerRadius = 10
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.darkGray.cgColor
+            testUIImageView.isHidden = true
         }
+        
+        completedTaskViews.forEach { view in
+            view.layer.cornerRadius = 10
+            view.layer.borderWidth = 1
+            view.layer.borderColor = UIColor.green.cgColor
+        }
+        
+        animationWrapperViews.forEach { wrapper in
+            wrapper.layer.cornerRadius = 10
+        }
+        
         // Do any additional setup after loading the view.
     }
     
