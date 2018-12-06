@@ -335,6 +335,7 @@
                         <outlet property="dataCollectionTestLabel" destination="P3C-8e-aAc" id="ja7-Eu-eFL"/>
                         <outlet property="popOver" destination="PCA-RT-Vgq" id="i8K-AB-ofB"/>
                         <outletCollection property="allButtons" destination="b6l-rc-ZyK" collectionClass="NSMutableArray" id="sgg-j7-bRf"/>
+                        <segue destination="zqg-YH-jhi" kind="show" identifier="TestCompletedViewController" id="hou-HT-sjl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7BR-0P-Lct" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -405,7 +406,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Take Different Test"/>
                                 <connections>
-                                    <action selector="takeAnotherTestTap:" destination="zqg-YH-jhi" eventType="touchUpInside" id="mBP-LQ-Yxz"/>
+                                    <segue destination="54h-lT-oIY" kind="unwind" unwindAction="unwindToMainSelectViewControllerWithSegue:" id="osW-Ik-U0x"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -414,6 +415,7 @@
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nhh-KW-OGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="54h-lT-oIY" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1958" y="2985"/>
         </scene>
@@ -504,14 +506,6 @@
                                         </state>
                                         <connections>
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="9EV-hI-BHg"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-nx-D7S">
-                                        <rect key="frame" x="291" y="108" width="57" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Animate"/>
-                                        <connections>
-                                            <action selector="slideTextButtonTapped:" destination="szR-l8-tUF" eventType="touchUpInside" id="wrN-Di-ODX"/>
                                         </connections>
                                     </button>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SoG-nV-r5r">

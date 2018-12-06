@@ -10,6 +10,10 @@ import UIKit
 
 class MainSelectViewController: UIViewController {
     
+    @IBAction func unwindToMainSelectViewController(segue: UIStoryboardSegue) {
+        print("Unwind to Main Menu View Controller")
+    }
+    
     @IBOutlet var allButtons: [UIButton]!
     
     @IBOutlet weak var testUIImageView: UIImageView!
@@ -20,24 +24,34 @@ class MainSelectViewController: UIViewController {
     @IBOutlet var completedTaskViews: [UIImageView]!
     
     var hasCompletedTest = false
-    
-    @IBAction func slideTextButtonTapped(_ sender: UIButton) {
-        testUIImageView.isHidden = false
-        self.testUIImageView.slideInFromRight()
-    }
+    var hasCompletedTestNameLabel = ""
     
     func checkOffCompletedTests(){
-        
-        if hasCompletedTest == true {
-        testUIImageView.isHidden = false
-        self.testUIImageView.slideInFromRight()
-        } else {
+        print(hasCompletedTestNameLabel)
+        switch hasCompletedTestNameLabel {
+        case "Balance":
+            testUIImageView.isHidden = false
+            self.testUIImageView.slideInFromRight()
+        default:
             return
         }
+        
+//        if hasCompletedTest == true {
+//        testUIImageView.isHidden = false
+//        self.testUIImageView.slideInFromRight()
+//        } else {
+//            return
+//        }
     }
     
-    func viewDidAppear(){
-        checkOffCompletedTests()
+    
+    override func viewDidAppear(_ animated: Bool){
+        super.viewDidAppear(animated)
+        
+        if (self.isMovingToParentViewController || self.isBeingPresented){
+        } else {
+            checkOffCompletedTests()
+        }
     }
     
     override func viewDidLoad() {
@@ -59,8 +73,7 @@ class MainSelectViewController: UIViewController {
         animationWrapperViews.forEach { wrapper in
             wrapper.layer.cornerRadius = 10
         }
-        
-        // Do any additional setup after loading the view.
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

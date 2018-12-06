@@ -45,8 +45,6 @@ class RunningTestViewController: UIViewController {
 
     }
     
-    
-    
     // Pre-test countdown timer
     var TIMER = Timer()
     var SECONDS = 5
@@ -83,11 +81,7 @@ class RunningTestViewController: UIViewController {
         if secondsForDataCollection == 0 {
             
             dataCollectionTimer.invalidate()
-
-            // Push navigation to Completed Test view
-            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TestCompletedViewController") as? TestCompletedViewController
-            self.navigationController?.pushViewController(vc!, animated: true)
-            
+            performSegue(withIdentifier: "TestCompletedViewController", sender: self)
         }
     }
     
@@ -115,7 +109,15 @@ class RunningTestViewController: UIViewController {
         return
     }
     
-    // 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        
+        if segue.destination is TestCompletedViewController {
+            
+            let nextVC = segue.destination as? TestCompletedViewController
+            nextVC?.testNameLabel = testNameLabel
+        }
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

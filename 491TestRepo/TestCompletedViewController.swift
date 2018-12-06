@@ -9,10 +9,11 @@
 import UIKit
 
 class TestCompletedViewController: UIViewController {
-
+    
+    var testNameLabel = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         // Hide default navigation back button
         self.navigationItem.hidesBackButton = true
     }
@@ -29,21 +30,13 @@ class TestCompletedViewController: UIViewController {
         self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
     }
     
-    @IBAction func takeAnotherTestTap(_ sender: Any) {
-        
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-
-        guard let mainNavigationVC = mainStoryboard.instantiateViewController(withIdentifier: "MainNavigationController") as? MainNavigationController else {
-            return
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is MainSelectViewController {
+            
+            let nextVC = segue.destination as? MainSelectViewController
+            nextVC!.hasCompletedTest = true
+            nextVC!.hasCompletedTestNameLabel = testNameLabel
         }
-
-        if let mainVC = mainNavigationVC.topViewController as? MainSelectViewController{
-                    mainVC.hasCompletedTest = true
-                }
-        
-        
-        // Pop to Main Test Selection Menu
-        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
-    self.navigationController!.popToViewController(viewControllers[1], animated: true)
     }
 }
