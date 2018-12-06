@@ -68,8 +68,6 @@ class RunningTestViewController: UIViewController {
     }
     
     
-    
-    
     // Data collection
     var dataCollectionTimer = Timer()
     var secondsForDataCollection = 0
@@ -85,7 +83,11 @@ class RunningTestViewController: UIViewController {
         if secondsForDataCollection == 0 {
             
             dataCollectionTimer.invalidate()
-            navigateToTestCompletedInterface()
+
+            // Push navigation to Completed Test view
+            let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "TestCompletedViewController") as? TestCompletedViewController
+            self.navigationController?.pushViewController(vc!, animated: true)
+            
         }
     }
     
@@ -113,34 +115,10 @@ class RunningTestViewController: UIViewController {
         return
     }
     
-    
-    private func navigateToTestCompletedInterface(){
-        
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
-        guard let completedTestVC = mainStoryboard.instantiateViewController(withIdentifier: "TestCompletedViewController") as? TestCompletedViewController else {
-            return
-        }
-        
-        // this is a modal segue; not a push/pop segue
-        present(completedTestVC, animated: true, completion: nil)
-        
-    }
+    // 
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

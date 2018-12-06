@@ -377,36 +377,43 @@
             </objects>
             <point key="canvasLocation" x="972" y="2985.1574212893556"/>
         </scene>
-        <!--Test Completed Interface-->
-        <scene sceneID="9nJ-uF-RBh">
+        <!--Test Completed View Controller-->
+        <scene sceneID="nRL-2Q-6hW">
             <objects>
-                <viewController storyboardIdentifier="TestCompletedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SIh-Mo-z9S" userLabel="Test Completed Interface" customClass="TestCompletedViewController" customModule="_91TestRepo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="V7R-lZ-3Ah">
+                <viewController storyboardIdentifier="TestCompletedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="zqg-YH-jhi" customClass="TestCompletedViewController" customModule="_91TestRepo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5Rb-7h-qLP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4F8-px-Fvl">
-                                <rect key="frame" x="147" y="192" width="80" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWC-SA-ylU">
+                                <rect key="frame" x="147" y="318" width="80" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Retake Test"/>
                                 <connections>
-                                    <segue destination="sWR-1k-bX7" kind="show" id="REL-N2-T9P"/>
+                                    <action selector="retakeTestTap:" destination="zqg-YH-jhi" eventType="touchUpInside" id="PiY-SC-24B"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQa-mp-LTW">
-                                <rect key="frame" x="130" y="346" width="114" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thank you!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygk-5W-KUh">
+                                <rect key="frame" x="145" y="119" width="85" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Try Another Test"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sf-Rh-HgF">
+                                <rect key="frame" x="123" y="426" width="129" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Different Test"/>
                                 <connections>
-                                    <segue destination="szR-l8-tUF" kind="show" id="e8t-eR-Jx0"/>
+                                    <action selector="takeAnotherTestTap:" destination="zqg-YH-jhi" eventType="touchUpInside" id="mBP-LQ-Yxz"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="DUZ-im-fa0"/>
+                        <viewLayoutGuide key="safeArea" id="F98-V7-IS4"/>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4dG-lv-tG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nhh-KW-OGI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1958" y="2985"/>
         </scene>
@@ -499,8 +506,16 @@
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="9EV-hI-BHg"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-nx-D7S">
+                                        <rect key="frame" x="291" y="108" width="57" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Animate"/>
+                                        <connections>
+                                            <action selector="slideTextButtonTapped:" destination="szR-l8-tUF" eventType="touchUpInside" id="wrN-Di-ODX"/>
+                                        </connections>
+                                    </button>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SoG-nV-r5r">
-                                        <rect key="frame" x="279" y="159" width="80" height="80"/>
+                                        <rect key="frame" x="279" y="351" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="SKG-H5-zkY">
@@ -511,14 +526,6 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xT-nx-D7S">
-                                        <rect key="frame" x="291" y="108" width="57" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Animate"/>
-                                        <connections>
-                                            <action selector="slideTextButtonTapped:" destination="szR-l8-tUF" eventType="touchUpInside" id="wrN-Di-ODX"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </view>
                         </subviews>
@@ -532,8 +539,8 @@
                         <outletCollection property="allButtons" destination="gdo-fY-F7s" collectionClass="NSMutableArray" id="OqM-WW-kl4"/>
                         <outletCollection property="allButtons" destination="cYB-t3-D1z" collectionClass="NSMutableArray" id="puJ-ok-EAN"/>
                         <outletCollection property="allButtons" destination="GBD-T1-xRy" collectionClass="NSMutableArray" id="Ug1-DE-hkp"/>
-                        <outletCollection property="completedTaskViews" destination="SKG-H5-zkY" collectionClass="NSMutableArray" id="UFD-8c-aqP"/>
                         <outletCollection property="animationWrapperViews" destination="SoG-nV-r5r" collectionClass="NSMutableArray" id="22n-yJ-RqG"/>
+                        <outletCollection property="completedTaskViews" destination="SKG-H5-zkY" collectionClass="NSMutableArray" id="UFD-8c-aqP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76u-Jb-BX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -774,8 +781,6 @@
         <image name="checkmark" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="U5l-Ho-J0Q"/>
-        <segue reference="REL-N2-T9P"/>
         <segue reference="6kF-YA-7sj"/>
     </inferredMetricsTieBreakers>
 </document>

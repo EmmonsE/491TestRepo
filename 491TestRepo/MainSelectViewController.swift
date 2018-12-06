@@ -19,15 +19,31 @@ class MainSelectViewController: UIViewController {
     
     @IBOutlet var completedTaskViews: [UIImageView]!
     
+    var hasCompletedTest = false
+    
     @IBAction func slideTextButtonTapped(_ sender: UIButton) {
         testUIImageView.isHidden = false
         self.testUIImageView.slideInFromRight()
     }
     
+    func checkOffCompletedTests(){
+        
+        if hasCompletedTest == true {
+        testUIImageView.isHidden = false
+        self.testUIImageView.slideInFromRight()
+        } else {
+            return
+        }
+    }
+    
+    func viewDidAppear(){
+        checkOffCompletedTests()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         allButtons.forEach { button in
+            
             button.layer.cornerRadius = 10
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.darkGray.cgColor
@@ -62,16 +78,5 @@ class MainSelectViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

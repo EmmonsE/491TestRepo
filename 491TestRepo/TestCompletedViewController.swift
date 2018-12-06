@@ -12,8 +12,9 @@ class TestCompletedViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Hide default navigation back button
+        self.navigationItem.hidesBackButton = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,15 +22,28 @@ class TestCompletedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    @IBAction func retakeTestTap(_ sender: Any) {
+        
+        // Pop to last test Start Test view
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+        self.navigationController!.popToViewController(viewControllers[viewControllers.count - 3], animated: true)
     }
-    */
+    
+    @IBAction func takeAnotherTestTap(_ sender: Any) {
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
 
+        guard let mainNavigationVC = mainStoryboard.instantiateViewController(withIdentifier: "MainNavigationController") as? MainNavigationController else {
+            return
+        }
+
+        if let mainVC = mainNavigationVC.topViewController as? MainSelectViewController{
+                    mainVC.hasCompletedTest = true
+                }
+        
+        
+        // Pop to Main Test Selection Menu
+        let viewControllers: [UIViewController] = self.navigationController!.viewControllers as [UIViewController]
+    self.navigationController!.popToViewController(viewControllers[1], animated: true)
+    }
 }
