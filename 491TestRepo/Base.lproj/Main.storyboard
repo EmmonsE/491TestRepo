@@ -46,11 +46,11 @@
                                     <segue destination="BYZ-38-t0r" kind="show" id="XV1-LO-j3F"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1763.png" translatesAutoresizingMaskIntoConstraints="NO" id="SWT-aP-MiV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1763" translatesAutoresizingMaskIntoConstraints="NO" id="SWT-aP-MiV">
                                 <rect key="frame" x="118" y="573" width="138" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UMassAmherst_longform-RGB.png" translatesAutoresizingMaskIntoConstraints="NO" id="lYi-7C-C2C">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UMassAmherst_longform-RGB" translatesAutoresizingMaskIntoConstraints="NO" id="lYi-7C-C2C">
                                 <rect key="frame" x="118" y="495" width="138" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -503,7 +503,7 @@
                                         <rect key="frame" x="279" y="159" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark.png" translatesAutoresizingMaskIntoConstraints="NO" id="SKG-H5-zkY">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="SKG-H5-zkY">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -710,11 +710,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1763.png" translatesAutoresizingMaskIntoConstraints="NO" id="hxz-3h-xbc">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1763" translatesAutoresizingMaskIntoConstraints="NO" id="hxz-3h-xbc">
                                 <rect key="frame" x="119" y="544" width="138" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UMassAmherst_longform-RGB.png" translatesAutoresizingMaskIntoConstraints="NO" id="kgA-nF-Rva">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="UMassAmherst_longform-RGB" translatesAutoresizingMaskIntoConstraints="NO" id="kgA-nF-Rva">
                                 <rect key="frame" x="119" y="466" width="138" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -769,13 +769,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="1763.png" width="645" height="207"/>
-        <image name="UMassAmherst_longform-RGB.png" width="787" height="314"/>
-        <image name="checkmark.png" width="512" height="512"/>
+        <image name="1763" width="645" height="207"/>
+        <image name="UMassAmherst_longform-RGB" width="787" height="314"/>
+        <image name="checkmark" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="e8t-eR-Jx0"/>
+        <segue reference="U5l-Ho-J0Q"/>
         <segue reference="REL-N2-T9P"/>
-        <segue reference="g4l-Fp-e0L"/>
+        <segue reference="6kF-YA-7sj"/>
     </inferredMetricsTieBreakers>
 </document>
