@@ -273,7 +273,7 @@
                                             <color key="titleShadowColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="sWR-1k-bX7" kind="show" id="cGz-fG-Pbl"/>
+                                            <segue destination="sWR-1k-bX7" kind="show" identifier="RunningTestViewController" id="cGz-fG-Pbl"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vfZ-Bg-nwx">
@@ -292,6 +292,7 @@
                     <connections>
                         <outlet property="startTestButton" destination="Ewh-m5-Rur" id="xeR-cD-xa5"/>
                         <outlet property="testNameLabel" destination="vfZ-Bg-nwx" id="aQv-op-oT8"/>
+                        <outletCollection property="allButtons" destination="Ewh-m5-Rur" collectionClass="NSMutableArray" id="eIF-Sr-kqQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hM7-0V-vSx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -317,10 +318,10 @@
                                     <color key="titleShadowColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="171-sb-Z7M">
-                                <rect key="frame" x="37" y="130" width="0.0" height="0.0"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3C-8e-aAc">
+                                <rect key="frame" x="166" y="275" width="42" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="61"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -329,25 +330,41 @@
                         <viewLayoutGuide key="safeArea" id="hNT-Mw-5cO"/>
                     </view>
                     <connections>
-                        <outlet property="countdownLabel" destination="171-sb-Z7M" id="82m-a7-ivI"/>
+                        <outlet property="countdownLabel" destination="171-sb-Z7M" id="QYH-CI-IHQ"/>
+                        <outlet property="currTestNameLabel" destination="aRN-Mg-IMP" id="2b8-Uk-C5W"/>
+                        <outlet property="dataCollectionTestLabel" destination="P3C-8e-aAc" id="ja7-Eu-eFL"/>
                         <outlet property="popOver" destination="PCA-RT-Vgq" id="i8K-AB-ofB"/>
+                        <outletCollection property="allButtons" destination="b6l-rc-ZyK" collectionClass="NSMutableArray" id="sgg-j7-bRf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7BR-0P-Lct" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="PCA-RT-Vgq">
-                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="286"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XB1-xP-iHL">
-                            <rect key="frame" x="97" y="98" width="46" height="30"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRN-Mg-IMP">
+                            <rect key="frame" x="-51" y="83" width="343" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Button"/>
-                            <connections>
-                                <action selector="popOverButtonTap:" destination="sWR-1k-bX7" eventType="touchUpInside" id="YiJ-XU-O3f"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uqt-aS-KL9">
-                            <rect key="frame" x="99" y="20" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Test Will Start In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bx8-vT-XCW">
+                            <rect key="frame" x="58" y="125" width="125" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="171-sb-Z7M">
+                            <rect key="frame" x="20" y="172" width="200" height="40"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7xc-RR-1Yc">
+                            <rect key="frame" x="105" y="42" width="30" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
@@ -359,6 +376,21 @@
                 </view>
             </objects>
             <point key="canvasLocation" x="972" y="2985.1574212893556"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9nJ-uF-RBh">
+            <objects>
+                <viewController id="SIh-Mo-z9S" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V7R-lZ-3Ah">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DUZ-im-fa0"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4dG-lv-tG0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1958" y="2985"/>
         </scene>
         <!--Main Test Selection View Controller-->
         <scene sceneID="Z4r-za-Oqb">
@@ -724,6 +756,6 @@
         <image name="checkmark.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="5AO-7J-k6p"/>
+        <segue reference="g4l-Fp-e0L"/>
     </inferredMetricsTieBreakers>
 </document>

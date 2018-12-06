@@ -10,6 +10,8 @@ import UIKit
 
 class TestPageViewController: UIViewController {
     
+    @IBOutlet var allButtons: [UIButton]!
+    
     @IBOutlet weak var testNameLabel: UILabel!
     
     @IBOutlet weak var startTestButton: UIButton!
@@ -19,9 +21,24 @@ class TestPageViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.testNameLabel.text = buttonMenuLabel
+        
+        allButtons.forEach { button in
+            button.layer.cornerRadius = 10
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.darkGray.cgColor
+        }
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        //let button = sender as! UIButton
+        
+        if segue.destination is RunningTestViewController {
+            
+            let nextVC = segue.destination as? RunningTestViewController
+            nextVC?.testNameLabel = buttonMenuLabel
+        }
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

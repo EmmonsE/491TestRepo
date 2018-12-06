@@ -10,39 +10,111 @@ import UIKit
 
 class RunningTestViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.popOver.layer.cornerRadius = 10
-        TIMER = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.runClock), userInfo: nil, repeats: true)
-        self.view.addSubview(countdownLabel)
-        // Do any additional setup after loading the view.
-    }
+    @IBOutlet var allButtons: [UIButton]!
+    
+    @IBOutlet weak var currTestNameLabel: UILabel!
+    
+    var testNameLabel = ""
     
     @IBOutlet var popOver: UIView!
     
-    @IBAction func cancelButtonTap(_ sender: Any) {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Load countdown popover on testing View Controller
+        //        self.view.addSubview(countdownLabel)
+        self.popOver.layer.cornerRadius = 10
         self.view.addSubview(popOver)
         popOver.center = self.view.center
+        self.currTestNameLabel.text = testNameLabel
+        
+        // Start countdown timer
+        TIMER = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.runCountdownClock), userInfo: nil, repeats: true)
+        
+        // Button styling
+        allButtons.forEach { button in
+            button.layer.cornerRadius = 10
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor.darkGray.cgColor
+        }
     }
     
+    
+    // TODO: Do something when user cancels the test
+    @IBAction func cancelButtonTap(_ sender: Any) {
+
+    }
+    
+    
+    
+    // Pre-test countdown timer
     var TIMER = Timer()
     var SECONDS = 5
     //var countdownLabel: UILabel = UILabel(frame: CGRect(x: 50, y:50, width:320, height:50))
-    
     @IBOutlet weak var countdownLabel: UILabel!
     
-    @objc func runClock() {
+    @objc func runCountdownClock() {
         SECONDS = SECONDS - 1
         countdownLabel.text = String(SECONDS)
+        // TODO: start data collection here
+        // TODO: add "collecting data" animation
+        // When timer ends, start data collection and remove countdown subview
         if SECONDS == 0 {
-            //countdownLabel.backgroundColor = UIColor.lightGray
-            //countdownLabel.text = "Link to PopOver Now"
             
             TIMER.invalidate()
+            self.popOver.removeFromSuperview()
+            startDataCollection()
+        }
+    }
+    
+    
+    
+    
+    // Data collection
+    var dataCollectionTimer = Timer()
+    var secondsForDataCollection = 0
+    @IBOutlet weak var dataCollectionTestLabel: UILabel!
+    
+    @objc func runDataCollectionClock() {
+        
+        secondsForDataCollection = secondsForDataCollection - 1
+        dataCollectionTestLabel.text = String(secondsForDataCollection)
+        // TODO: stop data collection and animation
+        // TODO: open "finished popup"
+        // When data collection timer stops, stop collection data, open "completed view"
+        if secondsForDataCollection == 0 {
+            
+            dataCollectionTimer.invalidate()
             self.view.addSubview(popOver)
             popOver.center = self.view.center
         }
     }
+    
+    func startDataCollection(){
+        setDataCollectionTimerTime()
+        // Start data collection timer
+        dataCollectionTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.runDataCollectionClock), userInfo: nil, repeats: true)
+    }
+    
+    // TODO: finish setting times for all tests
+    func setDataCollectionTimerTime(){
+        
+        switch testNameLabel {
+            case "Rest Tremor":
+                secondsForDataCollection = 4
+            case "Postural Tremor":
+                secondsForDataCollection = 3
+            case "Intention Tremor":
+                secondsForDataCollection = 2
+            case "Kinetic Tremor":
+                secondsForDataCollection = 1
+            default:
+                secondsForDataCollection = 1
+        }
+        return
+    }
+    
+
     
     @IBAction func popOverButtonTap(_ sender: Any) {
         self.popOver.removeFromSuperview()

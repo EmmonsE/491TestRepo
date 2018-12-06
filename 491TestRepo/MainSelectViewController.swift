@@ -47,13 +47,6 @@ class MainSelectViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-//        @IBAction func nextViewTap(_ sender: Any) {
-//
-//            if let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "TestPageViewController") as? TestPageViewController {
-//                nextVC.buttonMenuLabel = testMenuOption.titleLabel!.text ?? ""
-//                self.navigationController!.pushViewController(nextVC, animated: true)
-//            }
-//        }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         let button = sender as! UIButton
