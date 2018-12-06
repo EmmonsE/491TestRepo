@@ -377,13 +377,31 @@
             </objects>
             <point key="canvasLocation" x="972" y="2985.1574212893556"/>
         </scene>
-        <!--View Controller-->
+        <!--Test Completed Interface-->
         <scene sceneID="9nJ-uF-RBh">
             <objects>
-                <viewController id="SIh-Mo-z9S" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TestCompletedViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="SIh-Mo-z9S" userLabel="Test Completed Interface" customClass="TestCompletedViewController" customModule="_91TestRepo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="V7R-lZ-3Ah">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4F8-px-Fvl">
+                                <rect key="frame" x="147" y="192" width="80" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Retake Test"/>
+                                <connections>
+                                    <segue destination="sWR-1k-bX7" kind="show" id="REL-N2-T9P"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQa-mp-LTW">
+                                <rect key="frame" x="130" y="346" width="114" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Try Another Test"/>
+                                <connections>
+                                    <segue destination="szR-l8-tUF" kind="show" id="e8t-eR-Jx0"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="DUZ-im-fa0"/>
                     </view>
@@ -756,6 +774,8 @@
         <image name="checkmark.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="e8t-eR-Jx0"/>
+        <segue reference="REL-N2-T9P"/>
         <segue reference="g4l-Fp-e0L"/>
     </inferredMetricsTieBreakers>
 </document>

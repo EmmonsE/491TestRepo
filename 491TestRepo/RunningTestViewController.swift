@@ -85,8 +85,7 @@ class RunningTestViewController: UIViewController {
         if secondsForDataCollection == 0 {
             
             dataCollectionTimer.invalidate()
-            self.view.addSubview(popOver)
-            popOver.center = self.view.center
+            navigateToTestCompletedInterface()
         }
     }
     
@@ -114,10 +113,18 @@ class RunningTestViewController: UIViewController {
         return
     }
     
-
     
-    @IBAction func popOverButtonTap(_ sender: Any) {
-        self.popOver.removeFromSuperview()
+    private func navigateToTestCompletedInterface(){
+        
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let completedTestVC = mainStoryboard.instantiateViewController(withIdentifier: "TestCompletedViewController") as? TestCompletedViewController else {
+            return
+        }
+        
+        // this is a modal segue; not a push/pop segue
+        present(completedTestVC, animated: true, completion: nil)
+        
     }
 
     override func didReceiveMemoryWarning() {
