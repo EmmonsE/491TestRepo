@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import CoreMotion
+import simd
 
 class RunningTestViewController: UIViewController {
     
@@ -15,6 +17,10 @@ class RunningTestViewController: UIViewController {
     @IBOutlet weak var currTestNameLabel: UILabel!
     
     var testNameLabel = ""
+    
+    var motionManager = CMMotionManager()
+    
+    var str: String = ""
     
     @IBOutlet var popOver: UIView!
     
@@ -42,8 +48,10 @@ class RunningTestViewController: UIViewController {
     
     // TODO: Do something when user cancels the test
     @IBAction func cancelButtonTap(_ sender: Any) {
-
+        
     }
+    
+    
     
     // Pre-test countdown timer
     var TIMER = Timer()
@@ -66,6 +74,8 @@ class RunningTestViewController: UIViewController {
     }
     
     
+    
+    
     // Data collection
     var dataCollectionTimer = Timer()
     var secondsForDataCollection = 0
@@ -79,48 +89,123 @@ class RunningTestViewController: UIViewController {
         // TODO: open "finished popup"
         // When data collection timer stops, stop collection data, open "completed view"
         if secondsForDataCollection == 0 {
-            
+            stopUpdates()
             dataCollectionTimer.invalidate()
-            performSegue(withIdentifier: "TestCompletedViewController", sender: self)
+            navigateToTestCompletedInterface()
+            
         }
     }
     
     func startDataCollection(){
+        
         setDataCollectionTimerTime()
         // Start data collection timer
+        
         dataCollectionTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(self.runDataCollectionClock), userInfo: nil, repeats: true)
+        startUpdates()
     }
     
     // TODO: finish setting times for all tests
     func setDataCollectionTimerTime(){
         
         switch testNameLabel {
-            case "Rest Tremor":
-                secondsForDataCollection = 4
-            case "Postural Tremor":
-                secondsForDataCollection = 3
-            case "Intention Tremor":
-                secondsForDataCollection = 2
-            case "Kinetic Tremor":
-                secondsForDataCollection = 1
-            default:
-                secondsForDataCollection = 1
+        case "Rest Tremor":
+            secondsForDataCollection = 4
+        case "Postural Tremor":
+            secondsForDataCollection = 3
+        case "Intention Tremor":
+            secondsForDataCollection = 2
+        case "Kinetic Tremor":
+            secondsForDataCollection = 1
+        default:
+            secondsForDataCollection = 1
         }
         return
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
+    
+    private func navigateToTestCompletedInterface(){
         
-        if segue.destination is TestCompletedViewController {
-            
-            let nextVC = segue.destination as? TestCompletedViewController
-            nextVC?.testNameLabel = testNameLabel
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        guard let completedTestVC = mainStoryboard.instantiateViewController(withIdentifier: "TestCompletedViewController") as? TestCompletedViewController else {
+            return
         }
+        
+        // this is a modal segue; not a push/pop segue
+        present(completedTestVC, animated: true, completion: nil)
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func startUpdates() {
+        NSLog("Updates Started")
+        
+        let motionManager = self.motionManager
+        NSLog("Acceleromter available")
+        
+        motionManager.showsDeviceMovementDisplay = true
+        
+        motionManager.startAccelerometerUpdates(to: .main) { accelerometerData, error in
+            guard let accelerometerData = accelerometerData else { return }
+            
+            let date = NSDate().timeIntervalSince1970
+            let timestamp = date
+            
+            let acceleration: double3 = [accelerometerData.acceleration.x, accelerometerData.acceleration.y, accelerometerData.acceleration.z]
+            //            NSLog("%0.4f",accelerometerData.acceleration.x)
+            let newLine = "\(timestamp),\(accelerometerData.acceleration.x),\(accelerometerData.acceleration.y),\(accelerometerData.acceleration.z),"
+            self.str.append(contentsOf : newLine)
+            //            self.str = String(format: "%f", accelerometerData.acceleration.x)
+            
+        }
+        
+        
+        
+        
+        
+        motionManager.showsDeviceMovementDisplay = true
+        
+        motionManager.startGyroUpdates(to: .main) { gyroData, error in
+            guard let gyroData = gyroData else { return }
+            
+            let rotationRate: double3 = [gyroData.rotationRate.x, gyroData.rotationRate.y, gyroData.rotationRate.z]
+            let newLine = "\(gyroData.rotationRate.x),\(gyroData.rotationRate.y),\(gyroData.rotationRate.z)\n"
+            self.str.append(contentsOf : newLine)
+            
+        }
+    }
+    
+    func stopUpdates() {
+        NSLog("File Saving")
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("fileName.csv")
+        
+        let motionManager = self.motionManager
+        
+        motionManager.stopAccelerometerUpdates()
+        
+        do {
+            try str.write(to: path!, atomically: true, encoding: String.Encoding.utf8)
+            NSLog(str)
+        } catch {
+            print("Failed to create file")
+            print("\(error)")
+        }
+    }
+    
+    
+    /*
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
