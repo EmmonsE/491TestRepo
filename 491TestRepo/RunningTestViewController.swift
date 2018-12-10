@@ -150,6 +150,8 @@ class RunningTestViewController: UIViewController {
         
         motionManager.showsDeviceMovementDisplay = true
         
+        let newLine1 = "Time(sec), Accelerometer X(M/S^2), Accelerometer Y(M/S^2), Accelerometer Z(M/S^2),Gyroscope X(rad/S),Gyroscope Y(rad/S),Gyroscope Z(rad/S)\n"
+        self.str.append(contentsOf : newLine1)
         motionManager.startAccelerometerUpdates(to: .main) { accelerometerData, error in
             guard let accelerometerData = accelerometerData else { return }
             
@@ -182,7 +184,8 @@ class RunningTestViewController: UIViewController {
     
     func stopUpdates() {
         NSLog("File Saving")
-        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("fileName.csv")
+        let date = NSDate()
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(self.testNameLabel)-\(date)")
         
         let motionManager = self.motionManager
         
