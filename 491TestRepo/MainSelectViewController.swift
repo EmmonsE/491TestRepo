@@ -89,7 +89,7 @@ class MainSelectViewController: UIViewController {
         if segue.destination is TremorSelectionViewController {
             
             let nextVC = segue.destination as? TremorSelectionViewController
-            nextVC!.hasCompletedTestList = hasCompletedTestList
+            nextVC!.hasCompletedTestNameLabelTremor = hasCompletedTestNameLabel
         }
     }
     
