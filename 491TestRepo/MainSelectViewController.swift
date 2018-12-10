@@ -16,40 +16,38 @@ class MainSelectViewController: UIViewController {
     
     @IBOutlet var allButtons: [UIButton]!
     
-    @IBOutlet weak var testUIImageView: UIImageView!
-    
-    
     @IBOutlet var animationWrapperViews: [UIView]!
     
     @IBOutlet var completedTaskViews: [UIImageView]!
     
     var hasCompletedTest = false
     var hasCompletedTestNameLabel = ""
+    var hasCompletedTestList: [String] = []
     
     func checkOffCompletedTests(){
         print(hasCompletedTestNameLabel)
-        switch hasCompletedTestNameLabel {
-        case "Balance":
-            testUIImageView.isHidden = false
-            self.testUIImageView.slideInFromRight()
-        default:
-            return
-        }
         
-//        if hasCompletedTest == true {
-//        testUIImageView.isHidden = false
-//        self.testUIImageView.slideInFromRight()
-//        } else {
-//            return
-//        }
+        allButtons.forEach { button in
+            if (hasCompletedTestList.last == button.titleLabel!.text){
+                let indexOfCompletedTest = allButtons.index{$0 === button}
+                let imageView = completedTaskViews.filter { $0.tag == indexOfCompletedTest }.first
+                let animationWrapperView = animationWrapperViews.filter { $0.tag == indexOfCompletedTest }.first
+                animationWrapperView?.backgroundColor = UIColor.darkGray
+                imageView?.isHidden = false
+                imageView?.slideInFromRight()
+                button.isEnabled = false
+                button.backgroundColor = UIColor.darkGray
+            //hasCompletedTestList.append(hasCompletedTestNameLabel)
+                //hasCompletedTestNameLabel = ""
+            }
+        }
     }
-    
     
     override func viewDidAppear(_ animated: Bool){
         super.viewDidAppear(animated)
         
-        if (self.isMovingToParentViewController || self.isBeingPresented){
-        } else {
+        if !(self.isMovingToParentViewController || self.isBeingPresented){
+            hasCompletedTestList.append(hasCompletedTestNameLabel)
             checkOffCompletedTests()
         }
     }
@@ -61,13 +59,14 @@ class MainSelectViewController: UIViewController {
             button.layer.cornerRadius = 10
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.darkGray.cgColor
-            testUIImageView.isHidden = true
         }
         
         completedTaskViews.forEach { view in
             view.layer.cornerRadius = 10
-            view.layer.borderWidth = 1
-            view.layer.borderColor = UIColor.green.cgColor
+            view.layer.borderWidth = 3
+            view.layer.backgroundColor = UIColor(white: 1, alpha: 0.5).cgColor
+            view.layer.borderColor = UIColor(white: 1, alpha: 1).cgColor
+            view.isHidden = true
         }
         
         animationWrapperViews.forEach { wrapper in
@@ -82,8 +81,15 @@ class MainSelectViewController: UIViewController {
         
         if segue.destination is TestPageViewController {
             
-        let nextVC = segue.destination as? TestPageViewController
-        nextVC!.buttonMenuLabel = button.titleLabel!.text ?? ""
+            let nextVC = segue.destination as? TestPageViewController
+            nextVC!.buttonMenuLabel = button.titleLabel!.text ?? ""
+        
+        }
+        
+        if segue.destination is TremorSelectionViewController {
+            
+            let nextVC = segue.destination as? TremorSelectionViewController
+            nextVC!.hasCompletedTestList = hasCompletedTestList
         }
     }
     

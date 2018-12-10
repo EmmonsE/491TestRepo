@@ -449,7 +449,7 @@
                                             <color key="titleShadowColor" red="0.43529412150000002" green="0.4431372583" blue="0.47450980539999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
-                                            <segue destination="ERg-nv-npt" kind="show" id="ql1-tK-LFx"/>
+                                            <segue destination="ERg-nv-npt" kind="show" identifier="TremorSelectionViewController" id="ql1-tK-LFx"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="suH-1r-6xt">
@@ -466,6 +466,18 @@
                                             <segue destination="gWs-KK-LIH" kind="show" id="Hsh-GN-wlu"/>
                                         </connections>
                                     </button>
+                                    <view clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HSd-7v-KpI">
+                                        <rect key="frame" x="279" y="255" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="o3L-Ab-OvV">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdo-fY-F7s">
                                         <rect key="frame" x="16" y="351" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -480,11 +492,23 @@
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="bBe-Gn-FLZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYB-t3-D1z">
-                                        <rect key="frame" x="16" y="447" width="343" height="80"/>
+                                    <view clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SoG-nV-r5r">
+                                        <rect key="frame" x="279" y="351" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="SKG-H5-zkY">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYB-t3-D1z">
+                                        <rect key="frame" x="16" y="449" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="28"/>
+                                        <fontDescription key="fontDescription" name="HoeflerText-Regular" family="Hoefler Text" pointSize="28"/>
                                         <size key="titleShadowOffset" width="1" height="0.0"/>
                                         <state key="normal" title="Gait">
                                             <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -494,6 +518,18 @@
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="6kF-YA-7sj"/>
                                         </connections>
                                     </button>
+                                    <view clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GtL-OJ-JKb">
+                                        <rect key="frame" x="279" y="449" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="bMf-0X-HGj">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBD-T1-xRy">
                                         <rect key="frame" x="16" y="545" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -508,14 +544,26 @@
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="9EV-hI-BHg"/>
                                         </connections>
                                     </button>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SoG-nV-r5r">
-                                        <rect key="frame" x="279" y="351" width="80" height="80"/>
+                                    <view clipsSubviews="YES" tag="4" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J5N-0L-8e2">
+                                        <rect key="frame" x="279" y="545" width="80" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark" translatesAutoresizingMaskIntoConstraints="NO" id="SKG-H5-zkY">
+                                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="cfG-uk-Nzn">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yfk-N4-rEC">
+                                        <rect key="frame" x="279" y="159" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.45000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="0LM-a5-ZVC">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -527,7 +575,6 @@
                         <viewLayoutGuide key="safeArea" id="j9j-4u-SEG"/>
                     </view>
                     <connections>
-                        <outlet property="testUIImageView" destination="SKG-H5-zkY" id="nSc-o1-sXu"/>
                         <outletCollection property="allButtons" destination="IXc-my-CLx" collectionClass="NSMutableArray" id="NkB-oN-Cew"/>
                         <outletCollection property="allButtons" destination="suH-1r-6xt" collectionClass="NSMutableArray" id="Cfj-y2-Unk"/>
                         <outletCollection property="allButtons" destination="gdo-fY-F7s" collectionClass="NSMutableArray" id="OqM-WW-kl4"/>
@@ -535,6 +582,14 @@
                         <outletCollection property="allButtons" destination="GBD-T1-xRy" collectionClass="NSMutableArray" id="Ug1-DE-hkp"/>
                         <outletCollection property="animationWrapperViews" destination="SoG-nV-r5r" collectionClass="NSMutableArray" id="22n-yJ-RqG"/>
                         <outletCollection property="completedTaskViews" destination="SKG-H5-zkY" collectionClass="NSMutableArray" id="UFD-8c-aqP"/>
+                        <outletCollection property="completedTaskViews" destination="cfG-uk-Nzn" collectionClass="NSMutableArray" id="xmB-rL-8JZ"/>
+                        <outletCollection property="completedTaskViews" destination="bMf-0X-HGj" collectionClass="NSMutableArray" id="qh2-Mt-Ltz"/>
+                        <outletCollection property="animationWrapperViews" destination="GtL-OJ-JKb" collectionClass="NSMutableArray" id="XW0-Xl-hih"/>
+                        <outletCollection property="animationWrapperViews" destination="J5N-0L-8e2" collectionClass="NSMutableArray" id="6H2-vM-MKu"/>
+                        <outletCollection property="completedTaskViews" destination="0LM-a5-ZVC" collectionClass="NSMutableArray" id="L8V-Wg-2hP"/>
+                        <outletCollection property="completedTaskViews" destination="o3L-Ab-OvV" collectionClass="NSMutableArray" id="kug-yq-cET"/>
+                        <outletCollection property="animationWrapperViews" destination="HSd-7v-KpI" collectionClass="NSMutableArray" id="2XL-M6-aKd"/>
+                        <outletCollection property="animationWrapperViews" destination="Yfk-N4-rEC" collectionClass="NSMutableArray" id="8x1-Wo-4Lw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76u-Jb-BX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -574,6 +629,18 @@
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="WvD-E7-f6w"/>
                                         </connections>
                                     </button>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uXs-Qw-JyN">
+                                        <rect key="frame" x="279" y="233" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.44999998807907104" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="WLd-Wx-XQB">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g2S-CQ-083">
                                         <rect key="frame" x="16" y="328" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -588,6 +655,18 @@
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="TVa-0I-D8q"/>
                                         </connections>
                                     </button>
+                                    <view clipsSubviews="YES" tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZRM-R1-MHA">
+                                        <rect key="frame" x="279" y="328" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.44999998807907104" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="HM3-sn-BOn">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pYc-Fk-3or">
                                         <rect key="frame" x="16" y="423" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -602,6 +681,18 @@
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="E3F-TD-VRx"/>
                                         </connections>
                                     </button>
+                                    <view clipsSubviews="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ao8-Vb-uWt">
+                                        <rect key="frame" x="279" y="423" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.44999998807907104" tag="2" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="nE3-se-fII">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KSU-qJ-JEF">
                                         <rect key="frame" x="16" y="517" width="343" height="80"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -616,6 +707,18 @@
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="g4l-Fp-e0L"/>
                                         </connections>
                                     </button>
+                                    <view clipsSubviews="YES" tag="3" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6RN-UF-eb6">
+                                        <rect key="frame" x="279" y="517" width="80" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" alpha="0.44999998807907104" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkmark_white" translatesAutoresizingMaskIntoConstraints="NO" id="Nol-71-uVh">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="tintColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
                                 </subviews>
                             </view>
                         </subviews>
@@ -627,6 +730,14 @@
                         <outletCollection property="allButtons" destination="g2S-CQ-083" collectionClass="NSMutableArray" id="Fmv-9T-th2"/>
                         <outletCollection property="allButtons" destination="pYc-Fk-3or" collectionClass="NSMutableArray" id="k8s-Pg-T8O"/>
                         <outletCollection property="allButtons" destination="KSU-qJ-JEF" collectionClass="NSMutableArray" id="Fh6-67-sYC"/>
+                        <outletCollection property="completedTaskViews" destination="WLd-Wx-XQB" collectionClass="NSMutableArray" id="e5B-9J-vXX"/>
+                        <outletCollection property="completedTaskViews" destination="HM3-sn-BOn" collectionClass="NSMutableArray" id="cwg-EV-FGF"/>
+                        <outletCollection property="completedTaskViews" destination="nE3-se-fII" collectionClass="NSMutableArray" id="gb2-TD-r3u"/>
+                        <outletCollection property="completedTaskViews" destination="Nol-71-uVh" collectionClass="NSMutableArray" id="dZP-Xv-7QF"/>
+                        <outletCollection property="animationWrapperViews" destination="6RN-UF-eb6" collectionClass="NSMutableArray" id="yRh-Rv-vyz"/>
+                        <outletCollection property="animationWrapperViews" destination="ao8-Vb-uWt" collectionClass="NSMutableArray" id="usD-CI-il0"/>
+                        <outletCollection property="animationWrapperViews" destination="ZRM-R1-MHA" collectionClass="NSMutableArray" id="yo4-70-A2E"/>
+                        <outletCollection property="animationWrapperViews" destination="uXs-Qw-JyN" collectionClass="NSMutableArray" id="3kx-YE-ahG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DVR-tP-Ia6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -772,9 +883,9 @@
     <resources>
         <image name="1763" width="645" height="207"/>
         <image name="UMassAmherst_longform-RGB" width="787" height="314"/>
-        <image name="checkmark" width="512" height="512"/>
+        <image name="checkmark_white" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6kF-YA-7sj"/>
+        <segue reference="g4l-Fp-e0L"/>
     </inferredMetricsTieBreakers>
 </document>
