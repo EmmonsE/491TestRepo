@@ -84,7 +84,7 @@ class RunningTestViewController: UIViewController {
     @objc func runDataCollectionClock() {
         
         secondsForDataCollection = secondsForDataCollection - 1
-        dataCollectionTestLabel.text = String(secondsForDataCollection)
+        dataCollectionTestLabel.text = "Test Running... \(String(secondsForDataCollection))"
         // TODO: stop data collection and animation
         // TODO: open "finished popup"
         // When data collection timer stops, stop collection data, open "completed view"
@@ -110,15 +110,15 @@ class RunningTestViewController: UIViewController {
         
         switch testNameLabel {
         case "Rest Tremor":
-            secondsForDataCollection = 4
+            secondsForDataCollection = 5
         case "Postural Tremor":
-            secondsForDataCollection = 3
+            secondsForDataCollection = 5
         case "Intention Tremor":
-            secondsForDataCollection = 2
+            secondsForDataCollection = 5
         case "Kinetic Tremor":
-            secondsForDataCollection = 1
+            secondsForDataCollection = 10
         default:
-            secondsForDataCollection = 1
+            secondsForDataCollection = 20
         }
         return
     }
