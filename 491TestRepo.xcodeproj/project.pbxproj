@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2D0697DB21B9955700327E52 /* TestCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0697DA21B9955700327E52 /* TestCompletedViewController.swift */; };
+		2D0697E121BEEAD200327E52 /* CompletedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0697E021BEEAD200327E52 /* CompletedTests.swift */; };
 		2D165AF621B5AB1D0041F995 /* RunningTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D165AF521B5AB1D0041F995 /* RunningTestViewController.swift */; };
 		2D165B0021B77C070041F995 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D165AFF21B77C070041F995 /* UIViewExtensions.swift */; };
 		2D46B98C21B48F5300202D3D /* TremorSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D46B98B21B48F5300202D3D /* TremorSelectionViewController.swift */; };
@@ -26,6 +27,7 @@
 
 /* Begin PBXFileReference section */
 		2D0697DA21B9955700327E52 /* TestCompletedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCompletedViewController.swift; sourceTree = "<group>"; };
+		2D0697E021BEEAD200327E52 /* CompletedTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedTests.swift; sourceTree = "<group>"; };
 		2D165AF521B5AB1D0041F995 /* RunningTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunningTestViewController.swift; sourceTree = "<group>"; };
 		2D165AFF21B77C070041F995 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		2D46B98B21B48F5300202D3D /* TremorSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TremorSelectionViewController.swift; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 				2D165AF521B5AB1D0041F995 /* RunningTestViewController.swift */,
 				2D0697DA21B9955700327E52 /* TestCompletedViewController.swift */,
 				2D165AFF21B77C070041F995 /* UIViewExtensions.swift */,
+				2D0697E021BEEAD200327E52 /* CompletedTests.swift */,
 			);
 			path = 491TestRepo;
 			sourceTree = "<group>";
@@ -177,6 +180,7 @@
 				2DE68ADD21B451870008CB3B /* RootViewController.swift in Sources */,
 				2D46B98E21B48F7300202D3D /* BradySelectionViewController.swift in Sources */,
 				2DE68ADB21B449980008CB3B /* TestPageViewController.swift in Sources */,
+				2D0697E121BEEAD200327E52 /* CompletedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

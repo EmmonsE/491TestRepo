@@ -17,16 +17,32 @@ class TestPageViewController: UIViewController {
     @IBOutlet weak var startTestButton: UIButton!
     
     var buttonMenuLabel = ""
+    
+    //var test = CompletedTest()
+    
+    var modelController: TestModelController!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.testNameLabel.text = buttonMenuLabel
+        
+        setLabelText()
+//        private func getLabelText(_ currTestName: String){
+//            self.testNameLabel.text = test.currTestName!
+//        }
+        
+        
         
         allButtons.forEach { button in
             button.layer.cornerRadius = 10
             button.layer.borderWidth = 1
             button.layer.borderColor = UIColor.darkGray.cgColor
         }
+    }
+        
+    private func setLabelText(){
+        
+        let test = modelController.test
+        testNameLabel.text = test.currTestName
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

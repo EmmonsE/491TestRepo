@@ -44,6 +44,14 @@ class MedHistoryViewController: UIViewController {
         url = urls.first?.appendingPathComponent("data.archive") as NSURL?
         return url!
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is RootViewController {
+            
+            //let nextVC = segue.destination as? RootViewController
+        }
+    }
 
 
 }

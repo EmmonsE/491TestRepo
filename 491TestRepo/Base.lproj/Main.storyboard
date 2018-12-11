@@ -626,6 +626,7 @@
                                             <color key="titleShadowColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="onSelectTestButtonTap:" destination="ERg-nv-npt" eventType="touchUpInside" id="DBE-vo-CqF"/>
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="WvD-E7-f6w"/>
                                         </connections>
                                     </button>
@@ -652,6 +653,7 @@
                                             <color key="titleShadowColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="onSelectTestButtonTap:" destination="ERg-nv-npt" eventType="touchUpInside" id="ZX0-Zo-9ZF"/>
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="TVa-0I-D8q"/>
                                         </connections>
                                     </button>
@@ -678,6 +680,7 @@
                                             <color key="titleShadowColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="onSelectTestButtonTap:" destination="ERg-nv-npt" eventType="touchUpInside" id="3JM-kB-NKv"/>
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="E3F-TD-VRx"/>
                                         </connections>
                                     </button>
@@ -704,6 +707,7 @@
                                             <color key="titleShadowColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="onSelectTestButtonTap:" destination="ERg-nv-npt" eventType="touchUpInside" id="aye-hs-8N0"/>
                                             <segue destination="BQ3-IX-9wQ" kind="show" identifier="TestPageViewController" id="g4l-Fp-e0L"/>
                                         </connections>
                                     </button>

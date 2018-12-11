@@ -9,6 +9,10 @@
 import UIKit
 
 class RootViewController: UIViewController {
+    
+    @IBAction func unwindToMainSelectViewController(segue: UIStoryboardSegue) {
+        print("Unwind to Root View Controller")
+    }
 
     @IBOutlet var allButtons: [UIButton]!
     
