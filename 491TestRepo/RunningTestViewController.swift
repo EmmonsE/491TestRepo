@@ -185,7 +185,7 @@ class RunningTestViewController: UIViewController {
     func stopUpdates() {
         NSLog("File Saving")
         let date = NSDate()
-        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(self.testNameLabel)-\(date)")
+        let path = NSURL(fileURLWithPath: NSTemporaryDirectory()).appendingPathComponent("\(self.testNameLabel)-\(date).csv")
         
         let motionManager = self.motionManager
         
