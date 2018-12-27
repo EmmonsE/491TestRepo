@@ -150,7 +150,7 @@ class RunningTestViewController: UIViewController {
         
         motionManager.showsDeviceMovementDisplay = true
         
-        let newLine1 = "Time(sec), Accelerometer X(M/S^2), Accelerometer Y(M/S^2), Accelerometer Z(M/S^2),Gyroscope X(rad/S),Gyroscope Y(rad/S),Gyroscope Z(rad/S)\n"
+        let newLine1 = "Time(sec), mAccelerrometerMagnitude, Accelerometer X(M/S^2), Accelerometer Y(M/S^2), Accelerometer Z(M/S^2),mGyroscopeMagnitude, Gyroscope X(rad/S),Gyroscope Y(rad/S),Gyroscope Z(rad/S)\n"
         self.str.append(contentsOf : newLine1)
         motionManager.startAccelerometerUpdates(to: .main) { accelerometerData, error in
             guard let accelerometerData = accelerometerData else { return }
@@ -160,7 +160,7 @@ class RunningTestViewController: UIViewController {
             
             let acceleration: double3 = [accelerometerData.acceleration.x, accelerometerData.acceleration.y, accelerometerData.acceleration.z]
             //            NSLog("%0.4f",accelerometerData.acceleration.x)
-            let newLine = "\(timestamp),\(accelerometerData.acceleration.x),\(accelerometerData.acceleration.y),\(accelerometerData.acceleration.z),"
+            let newLine = "\(timestamp),\((pow(accelerometerData.acceleration.x,2)+pow(accelerometerData.acceleration.y,2)+pow(accelerometerData.acceleration.z,2)).squareRoot()),\(accelerometerData.acceleration.x),\(accelerometerData.acceleration.y),\(accelerometerData.acceleration.z),"
             self.str.append(contentsOf : newLine)
             //            self.str = String(format: "%f", accelerometerData.acceleration.x)
             
@@ -176,7 +176,7 @@ class RunningTestViewController: UIViewController {
             guard let gyroData = gyroData else { return }
             
             let rotationRate: double3 = [gyroData.rotationRate.x, gyroData.rotationRate.y, gyroData.rotationRate.z]
-            let newLine = "\(gyroData.rotationRate.x),\(gyroData.rotationRate.y),\(gyroData.rotationRate.z)\n"
+            let newLine = "\((pow(gyroData.rotationRate.x,2)+pow(gyroData.rotationRate.y,2)+pow(gyroData.rotationRate.z,2)).squareRoot()),\(gyroData.rotationRate.x),\(gyroData.rotationRate.y),\(gyroData.rotationRate.z)\n"
             self.str.append(contentsOf : newLine)
             
         }
